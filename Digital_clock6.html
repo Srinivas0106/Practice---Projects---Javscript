@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalClock</title>
+</head>
+<body>
+   <!-- Here using this code we are printing the double digit of each of m,s,h -->
+    <div id ="DigitalClock">  </div>
+        <script type="text/javascript">
+
+        function showTime(){                 // Declering a function
+            var date= new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            var session ="AM";
+
+            if (h==0){
+                h=12;  // 12 hours format
+            }
+            if (h>12){
+                h=h-12; // 13-12=1
+                session="PM";    
+            }
+
+            if (h<10){
+                h="0"+h; // <!-- for printing the 0 before the number when it is <10 -->
+            }
+
+            if (m<10){
+                m= "0"+m;
+            }
+            if (s<10){
+                s="0"+s;
+            }
+
+
+            document.getElementById("DigitalClock").innerHTML= h +":"+ m+":" +s+ "" +session;
+
+            setTimeout(showTime,1000); //  Atomatically it will generate  
+        };
+        showTime();  // Calling a function 
+        </script>
+  
+    
+</body>
+</html>

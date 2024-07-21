@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalClock</title>
+</head>
+<body>
+    <!-- this is a  static digital clock 
+    it is used for only changed after refreshing the page seconds will change
+    -->
+    <div id ="DigitalClock">  </div>
+        <script type="text/javascript">
+            var date= new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            document.getElementById("DigitalClock").innerHTML= h +":"+ m+":" +s;
+        </script>
+  
+    
+</body>
+</html>
